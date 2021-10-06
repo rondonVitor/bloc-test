@@ -1,5 +1,5 @@
-import 'package:bloc_test/pages/bloc/home_event.dart';
-import 'package:bloc_test/pages/bloc/home_state.dart';
+import 'package:bloc_test/pages/home/bloc/home_event.dart';
+import 'package:bloc_test/pages/home/bloc/home_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
@@ -7,7 +7,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   @override
   Stream<HomeState> mapEventToState(event) async* {
-    var state;
+    HomeState state = HomeStateEmptyList();
 
     switch (event.runtimeType) {
       case HomeFetchList:
